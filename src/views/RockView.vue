@@ -41,17 +41,18 @@ export default {
 body {
   background-image: url("@/assets/back.jpeg");
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
   height: 100vh;
   margin: 0;
   color: white;
-  transition: background-size 1s ease, filter 1s ease;
 }
 
 .form-container {
   position: absolute;
   top: calc((100% - 532px) / 2);
-  left: calc((100% - 532px) / 3);
+  left: calc((100% - 532px) / 4);
   width: 378px;
   height: 532px;
   background: #342828;
@@ -92,15 +93,10 @@ body {
 }
 
 @media (max-width: 540px) {
-  body {
-    background-position: center;
-    background-size: cover;
-  }
   .form-container {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    filter: brightness(90%);
   }
 }
 
